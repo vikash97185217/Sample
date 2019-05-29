@@ -1,0 +1,17 @@
+package com.vikas.demo;
+
+public class StringBuilderAppendMain {
+	public static void main(String[] args) {
+		System.out.println("Main starts");
+		StringBuilder header = new StringBuilder();
+		header.append("vikash,");
+		header.append("tushar,");
+		header.append("rhythem,");
+		StringBuilder header1 = new StringBuilder(header);		System.out.println("header1 : "+header1);
+		header1.append("vikash1,");
+		header1.append("tushar1,");
+		header1.append("rhythem1,");
+		System.out.println("header : "+header+" \nheader1:"+header1);
+		System.out.println("Main ends");
+	}
+}

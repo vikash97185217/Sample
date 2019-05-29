@@ -1,0 +1,8 @@
+package com.vikas.demo;
+
+public class StringBuilderAppendMain {
+	public static void main(String[] args) {
+		System.out.println("Main starts");
+		System.out.println("Main ends");
+	}
+}
