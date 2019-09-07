@@ -9,11 +9,11 @@ public class practice1 {
 			for(int i=1;i<s.length;i++){
 				int s1 =string.compareTo(s[i]);
 				if(s1==1){
-					String temp = 
+					String temp =""; 
 				}
 			}
 		}
-		System.out.println(Arrays.toString(s2));
+		System.out.println();
 	}
 }
 

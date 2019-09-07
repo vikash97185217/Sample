@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Base64;
+//import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -78,7 +78,7 @@ public class PostRequest {
 	public String bas64Conversion(String content){
 		byte[] bytes = content.getBytes();
 		//Convert byte[] to String
-		String s = Base64.getEncoder().encodeToString(bytes);
+		String s = "";//Base64.getEncoder().encodeToString(bytes);
 		return s;
 	}
 	private String readFileAsString(String filePath){

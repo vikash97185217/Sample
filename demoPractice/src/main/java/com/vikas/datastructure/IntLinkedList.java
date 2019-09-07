@@ -4,12 +4,12 @@ public class IntLinkedList {
 	private Node head;
 	private IntLinkedList(int item){
 		head=new Node();
-		head.value=item;
-		head.link=null;
+		head.data=item;
+		head.next=null;
 	}
 	private class Node{
-		int value;
-		Node link;
+		int data;
+		Node next;
 	}
 	public static void main(String[] args) {
 		IntLinkedList i = new IntLinkedList(10);
@@ -33,8 +33,8 @@ public class IntLinkedList {
 	//insert on the start
 private boolean insertInStart(int item){
 	Node n = new Node();
-	n.value = item;
-	n.link = head;
+	n.data = item;
+	n.next = head;
 	head = n;
 	return true;
 }
@@ -43,31 +43,31 @@ private boolean insertInStart(int item){
 		Node n = new Node();
 		Node newNode ;
 		newNode = head;
-		while(newNode.link !=null){
-			newNode = newNode.link;
+		while(newNode.next !=null){
+			newNode = newNode.next;
 		}
-		n.value=item;
-		n.link=null;
-		newNode.link=n;
+		n.data=item;
+		n.next=null;
+		newNode.next=n;
 		return true;
 	}
 private boolean delete(int item){
 	Node h = head;
-	Node h1 = head.link;
-	if(head.value == item){
-		head = head.link;
+	Node h1 = head.next;
+	if(head.data == item){
+		head = head.next;
 		return true;
 	}else{
 		while(true){
-			if(h1==null || h1.value==item){
+			if(h1==null || h1.data==item){
 				break;
 			}else{
 				h=h1;
-				h1=h1.link;
+				h1=h1.next;
 			}
 		}
 		if(h1!=null){
-			h.link=h1.link;
+			h.next=h1.next;
 			return true;
 		}else return false;
 	}
@@ -75,25 +75,25 @@ private boolean delete(int item){
 private void sortList(){
 	Node a = head;
 	int c=0;
-	while(a.link!=null){
+	while(a.next!=null){
 		Node b =head;
-		while(b.link!=null){			
-			if(b.value>b.link.value){
-				c=b.value;
-				b.value=b.link.value;
-				b.link.value=c;
+		while(b.next!=null){			
+			if(b.data>b.next.data){
+				c=b.data;
+				b.data=b.next.data;
+				b.next.data=c;
 			}
-			b=b.link;
+			b=b.next;
 		}
-		a=a.link;
+		a=a.next;
 	}
 	
 }
 private void printList(){
 	Node z =  head;
 	while(z!=null){
-		System.out.println(z.value);
-		z=z.link;
+		System.out.println(z.data);
+		z=z.next;
 	}
 	System.out.println("=================");
 }

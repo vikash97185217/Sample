@@ -27,7 +27,7 @@ public static void main(String args[]) {
 	/*while (itr.hasNext()){
 		System.out.println(itr.next());
 	}*/
-	LinkedList<String> linkedList = new LinkedList<>();
+	List<String> linkedList = new LinkedList<String>();
 	linkedList.add("aaa");
 	linkedList.add("bbb");
 	linkedList.add("xxx");
