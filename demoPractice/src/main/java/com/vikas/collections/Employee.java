@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	private String name;
 	
 	private Sallary sallary;
@@ -63,7 +63,9 @@ public class Employee {
 		employees.add(e3);
 		employees.add(e4);
 		employees.add(e5);
-		Collections.sort(employees,new SallaryBasicComparator());
+		Collections.sort(employees,new EmployeeNameComparator()
+				.thenComparing(new SallaryBasicComparator())
+				.thenComparing(new SallaryDaComparator()));
 		System.out.println(employees);
 	}
 	@Override
